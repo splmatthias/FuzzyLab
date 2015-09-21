@@ -1,0 +1,70 @@
+﻿<Application x:Class="fuzzyStudio.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="clr-namespace:FuzzyStudio.views"
+             xmlns:selectors="clr-namespace:fuzzyStudio.selectors"
+             xmlns:controls="clr-namespace:fuzzyStudio.controls"
+             xmlns:views1="clr-namespace:fuzzyStudio.views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style x:Key="regionStyle" TargetType="controls:Region">
+            <Style.Setters>
+                <Setter Property="BorderBrush" Value="#FFAEAEAE"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            </Style.Setters>
+        </Style>
+        
+        <Style x:Key="regionStyle2" TargetType="Expander">
+            <Style.Setters>
+                <Setter Property="BorderBrush" Value="#FFAEAEAE"/>
+            </Style.Setters>
+        </Style>
+
+
+        <selectors:TemplateSelector x:Key="TemplateSelector" >
+            <selectors:TemplateSelector.FuzzyConfig>
+                <DataTemplate >
+                    <views:FuzzyConfigurationView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.FuzzyConfig>
+            <selectors:TemplateSelector.NumericVariables>
+                <DataTemplate >
+                    <views:NumericVariablesView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.NumericVariables>
+            <selectors:TemplateSelector.FuzzyVariables>
+                <DataTemplate >
+                    <views:FuzzyVariableView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.FuzzyVariables>
+            <selectors:TemplateSelector.ControllerConfig>
+                <DataTemplate >
+                    <views:StrategiesView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.ControllerConfig>
+            <selectors:TemplateSelector.IterationTemplate>
+                <DataTemplate >
+                    <views:FuzzyIterationView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.IterationTemplate>
+            <selectors:TemplateSelector.Fuzzification>
+                <DataTemplate >
+                    <views1:FuzzificationView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.Fuzzification>
+            <selectors:TemplateSelector.Defuzzification>
+                <DataTemplate >
+                    <views1:DefuzzificationView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.Defuzzification>
+            <selectors:TemplateSelector.Evaluation>
+                <DataTemplate >
+                    <views:EvaluationView/>
+                </DataTemplate>
+            </selectors:TemplateSelector.Evaluation>
+        </selectors:TemplateSelector>
+    </Application.Resources>
+</Application>

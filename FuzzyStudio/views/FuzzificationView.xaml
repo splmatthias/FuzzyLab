@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="fuzzyStudio.views.FuzzificationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:fuzzyStudio.viewModels"
+             xmlns:dd="clr-namespace:fuzzyStudio.designData"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type dd:FuzzificationVm}}" >
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModels:FuzzyVariableViewModel}">
+            <TextBlock Text="{Binding Identifier}" FontSize="14"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Text="Available Variables" Margin="5,2" FontSize="16"/>
+        <ListBox x:Name="listBoxAvailable" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding AvailableVariables}" IsSynchronizedWithCurrentItem="True"/>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center">
+            <Button Content="&gt;&gt;&gt;" Margin="5,0"     Command="{Binding AddToScope}"      CommandParameter="{Binding ElementName=listBoxAvailable,Path=SelectedItem}"/>
+            <Button Content="&lt;&lt;&lt;" Margin="5,5,5,0" Command="{Binding RemoveFromScope}" CommandParameter="{Binding ElementName=listBoxScope,Path=SelectedItem}"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Margin="5,2" Text="Initial Scope" FontSize="16"/>
+        <ListBox x:Name="listBoxScope" Grid.Column="2" Grid.Row="1" ItemsSource="{Binding InitialScope}" IsSynchronizedWithCurrentItem="True"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyController", "FuzzyController\FuzzyController.csproj", "{78286FAD-1EF2-4914-98CB-7B7A519E61BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{57880FC7-6D59-4EC9-AE8D-595686EB5B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyController.Test", "Test\FuzzyController.Test\FuzzyController.Test.csproj", "{A96C4B1D-B061-48FD-8864-8627076361D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyStudio", "FuzzyStudio\FuzzyStudio.csproj", "{073F9561-5AE8-4323-95F9-62F7C7049608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{230C0436-8AB4-459E-90A0-6F5B2DCC7BFA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboSim", "RoboSim\RoboSim.csproj", "{D4CDD1A3-DC2C-41BC-92CB-F94BDF075231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyController.IntegrationTest", "Test\FuzzyController.IntegrationTest\FuzzyController.IntegrationTest.csproj", "{922E1601-C811-40EC-85B4-32ED9BFA5DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBase", "WpfBase\WpfBase.csproj", "{A47DF3F0-C6D9-494E-8391-B2B1A0315B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboSim.Test", "Test\RoboSim.Test\RoboSim.Test.csproj", "{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78286FAD-1EF2-4914-98CB-7B7A519E61BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78286FAD-1EF2-4914-98CB-7B7A519E61BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78286FAD-1EF2-4914-98CB-7B7A519E61BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78286FAD-1EF2-4914-98CB-7B7A519E61BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A96C4B1D-B061-48FD-8864-8627076361D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96C4B1D-B061-48FD-8864-8627076361D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96C4B1D-B061-48FD-8864-8627076361D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96C4B1D-B061-48FD-8864-8627076361D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073F9561-5AE8-4323-95F9-62F7C7049608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073F9561-5AE8-4323-95F9-62F7C7049608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073F9561-5AE8-4323-95F9-62F7C7049608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073F9561-5AE8-4323-95F9-62F7C7049608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CDD1A3-DC2C-41BC-92CB-F94BDF075231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CDD1A3-DC2C-41BC-92CB-F94BDF075231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CDD1A3-DC2C-41BC-92CB-F94BDF075231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CDD1A3-DC2C-41BC-92CB-F94BDF075231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922E1601-C811-40EC-85B4-32ED9BFA5DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922E1601-C811-40EC-85B4-32ED9BFA5DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922E1601-C811-40EC-85B4-32ED9BFA5DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922E1601-C811-40EC-85B4-32ED9BFA5DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47DF3F0-C6D9-494E-8391-B2B1A0315B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47DF3F0-C6D9-494E-8391-B2B1A0315B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47DF3F0-C6D9-494E-8391-B2B1A0315B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47DF3F0-C6D9-494E-8391-B2B1A0315B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A96C4B1D-B061-48FD-8864-8627076361D6} = {57880FC7-6D59-4EC9-AE8D-595686EB5B3D}
+		{922E1601-C811-40EC-85B4-32ED9BFA5DB9} = {57880FC7-6D59-4EC9-AE8D-595686EB5B3D}
+		{C95FD91A-A6CD-45F0-B94B-5B6A60BBD5D1} = {57880FC7-6D59-4EC9-AE8D-595686EB5B3D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,124 @@
+﻿<UserControl x:Class="FuzzyStudio.views.FuzzyIterationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dd="clr-namespace:fuzzyStudio.designData"
+             xmlns:controls="clr-namespace:fuzzyStudio.controls"
+             xmlns:viewModels="clr-namespace:fuzzyStudio.viewModels"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type dd:IterationVm}}" d:DesignWidth="600">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModels:TermViewModel}">
+            <TextBlock HorizontalAlignment="Center" Text="{Binding Term}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ValueExpressionViewModel}">
+            <StackPanel Orientation="Horizontal">
+                <ComboBox VerticalAlignment="Center" ItemsSource="{Binding Variables}" SelectedItem="{Binding SelectedVariable}" IsTabStop="False">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Identifier}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock Text="=" Margin="5,0" VerticalAlignment="Center"/>
+                <ComboBox VerticalAlignment="Center" ItemsSource="{Binding Values}" SelectedItem="{Binding SelectedValue}" IsTabStop="False"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:FuzzyVariableViewModel}">
+            <TextBlock HorizontalAlignment="Center" FontSize="14" Text="{Binding Identifier}"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="20,5">
+            <Border BorderThickness="0,0,0,1" BorderBrush="Black"  Margin="5,2,5,5">
+                <TextBlock Text="Input Scope" FontSize="16"/>
+            </Border>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+                <ItemsControl HorizontalContentAlignment="Center" ItemsSource="{Binding InputScope}"/>
+            </ScrollViewer>
+        </StackPanel>
+        <Border BorderThickness="1,0" BorderBrush="Gray" Grid.Column="1">
+            <StackPanel Margin="0,5,0,0">
+                <Grid>
+                    <Border HorizontalAlignment="Center" BorderThickness="0,0,0,1" BorderBrush="Black"  Margin="5,2,5,5">
+                        <TextBlock Text="Rules" FontSize="16"/>
+                    </Border>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0" Command="{Binding AddRule}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../resources/plus.png" Margin="2,0"/>
+                            <TextBlock Text="Add Rule" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ItemsControl Margin="5" ItemsSource="{Binding Rules}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Expander IsExpanded="True" Style="{StaticResource regionStyle2}" Margin="2">
+                                    <Expander.Header>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock FontSize="14" Text="Rule"/>
+                                            <Button Grid.Column="1" 
+                                            Margin="40,0,0,0" 
+                                            Command="{Binding DataContext.RemoveRule, 
+                                                              RelativeSource={RelativeSource FindAncestor, 
+                                                              AncestorType={x:Type UserControl}}}" 
+                                            CommandParameter="{Binding}">
+                                                <Image Source="../resources/minus.png"/>
+                                            </Button>
+                                        </Grid>
+                                    </Expander.Header>
+                                    <Border BorderThickness="0,1,0,0" BorderBrush="#FFAEAEAE">
+                                        <StackPanel>
+                                            <TreeView BorderThickness="0" Background="{x:Null}" ItemsSource="{Binding Premise}">
+                                                <TreeView.ItemContainerStyle>
+                                                    <Style TargetType="TreeViewItem">
+                                                        <Setter Property="IsExpanded" Value="True"/>
+                                                    </Style>
+                                                </TreeView.ItemContainerStyle>
+                                                <TreeView.Resources>
+                                                    <HierarchicalDataTemplate DataType="{x:Type viewModels:ExpressionViewModel}" ItemsSource="{Binding SubExpressions}">
+                                                        <ComboBox ItemsSource="{Binding Types}" SelectedItem="{Binding SelectedType}" IsTabStop="False"/>
+                                                    </HierarchicalDataTemplate>
+                                                </TreeView.Resources>
+                                            </TreeView>
+                                            <Border BorderThickness="0,1,0,0" BorderBrush="Gray" Margin="5">
+                                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                                    <TextBlock Text="=>" FontSize="20" VerticalAlignment="Center"/>
+                                                    <ContentPresenter Content="{Binding Conclusion}"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+                                    </Border>
+                                </Expander>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Column="2" Margin="20,5">
+            <Border BorderThickness="0,0,0,1" BorderBrush="Black"  Margin="5,2,5,5">
+                <TextBlock Text="Output Scope" FontSize="16"/>
+            </Border>
+            <ItemsControl HorizontalContentAlignment="Center">
+                <ItemsControl HorizontalContentAlignment="Center" ItemsSource="{Binding OutputScope}"/>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

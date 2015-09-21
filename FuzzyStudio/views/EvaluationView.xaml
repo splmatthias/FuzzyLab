@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="FuzzyStudio.views.EvaluationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:designData="clr-namespace:fuzzyStudio.designData"
+             xmlns:converter="clr-namespace:fuzzyStudio.converter"
+             xmlns:viewModels="clr-namespace:fuzzyStudio.viewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance Type=designData:EvaluationVm, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <converter:NumberRangeConverter x:Key="maxConverter" />
+        <converter:MinRangeConverter x:Key="minConverter" />
+
+        <DataTemplate DataType="{x:Type viewModels:DefuzzificationResultViewModel}">
+
+            <Border Margin="0,0,0,10" BorderThickness="1" CornerRadius="5" BorderBrush="#FFAEAEAE">
+                <Expander Header="Defuzzification" IsExpanded="True" BorderThickness="0">
+                    <Border BorderBrush="#FFAEAEAE" BorderThickness="0,1,0,0">
+                        <ItemsControl ItemsSource="{Binding Items}" FontSize="20">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Padding="0" Content="{Binding FuzzyVariable}"></Label>
+                                        <Label Padding="0" Content=" = "></Label>
+                                        <Label Padding="0" Content="{Binding Value}"></Label>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Border>
+                </Expander>
+            </Border>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewModels:ScopeViewModel}">
+            <Border Margin="0,0,0,10" BorderThickness="1" CornerRadius="5" BorderBrush="#FFAEAEAE">
+                <Expander Header="{Binding Title}" IsExpanded="True" BorderThickness="0">
+                    <Border BorderBrush="#FFAEAEAE"  BorderThickness="0,1,0,0">
+                        <ItemsControl ItemsSource="{Binding Values}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="5" Padding="2" BorderBrush="#FFAEAEAE" BorderThickness="1">
+                                        <ItemsControl ItemsSource="{Binding Values}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Label Padding="0" Content="{Binding DataContext.FuzzyVariable, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"></Label>
+                                                        <Label Padding="0" Content=" = "></Label>
+                                                        <Label Padding="0" Content="{Binding Term}"></Label>
+                                                        <Label Padding="0" Content=": "></Label>
+                                                        <Label Padding="0" Content="{Binding Value}"></Label>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Border>
+                </Expander>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Margin="0,0,5,0" Grid.Column="0" BorderThickness="1" VerticalAlignment="Top" CornerRadius="5" BorderBrush="#FFAEAEAE">
+            <Expander Header="Numeric Values" IsExpanded="True" BorderThickness="0">
+                <Border BorderBrush="#FFAEAEAE"  BorderThickness="0,1,0,0">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton Content="Direct Input" Margin="5" IsChecked="{Binding UseDirectInput}"/>
+                            <RadioButton Content="Input Module" Margin="5" />
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel.Style>
+                                <Style TargetType="StackPanel">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseDirectInput}" Value="True">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </StackPanel.Style>
+                            <Button Content="Open input module" Padding="5,2" VerticalAlignment="Top" HorizontalAlignment="Left" Command="{Binding OpenPlugin}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel.Style>
+                                <Style TargetType="StackPanel">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding UseDirectInput}" Value="False">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </StackPanel.Style>
+                            <Button Content="Update Controller" Padding="5,2" VerticalAlignment="Top" HorizontalAlignment="Left" Command="{Binding UpdateController}"/>
+                        </StackPanel>
+                        <ItemsControl ItemsSource="{Binding NumericValues}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="0,2" BorderThickness="0,1,0,0" BorderBrush="#FF9E9E9E">
+                                        <Border.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFB3D1DA" Offset="0"/>
+                                                <GradientStop Color="White" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                            <Label Content="{Binding Identifier}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="5,0"/>
+                                            <TextBox Margin="0,2,5,2" Width="75" Text="{Binding Value}" Padding="0">
+                                                <TextBox.Style>
+                                                    <Style TargetType="TextBox">
+                                                        <Style.Triggers>
+                                                            <!--<DataTrigger Binding="{Binding DataContext.UseDirectInput, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" Value="True">
+                                                                <Setter Property="IsReadOnly" Value="False"/>
+                                                            </DataTrigger>-->
+                                                            <DataTrigger Binding="{Binding DataContext.UseDirectInput, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" Value="False">
+                                                                <Setter Property="IsReadOnly" Value="True"/>
+                                                                <Setter Property="Background" Value="#FFE4E4E4"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBox.Style>
+                                            </TextBox>
+                                            <Label Width="80"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,5,0" >
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="[ "/>
+                                                    <TextBlock Text="{Binding MinValue, Converter={StaticResource minConverter}}"/>
+                                                    <TextBlock Text=" ; "/>
+                                                    <TextBlock Text="{Binding MaxValue, Converter={StaticResource maxConverter}}"/>
+                                                    <TextBlock Text=" ]"/>
+                                                </StackPanel>
+                                            </Label>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </Expander>
+        </Border>
+
+        <StackPanel Margin="5,0,0,0"  Grid.Column="1">
+            <ContentPresenter Margin="0,0,0,5" Content="{Binding Fuzzification}"/>
+            <ItemsControl ItemsSource="{Binding Scopes}"/>
+            <ContentPresenter Margin="0,5,0,0" Content="{Binding Defuzzification}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

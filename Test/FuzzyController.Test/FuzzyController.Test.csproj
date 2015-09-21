@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A96C4B1D-B061-48FD-8864-8627076361D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fuzzyController.test</RootNamespace>
+    <AssemblyName>FuzzyController.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="defuzzifier\DefuzzifierTest.cs" />
+    <Compile Include="defuzzifier\strategies\CoGDefuzzifyStrategyTest.cs" />
+    <Compile Include="defuzzifier\strategies\MaximumDefuzzifyStrategyTest.cs" />
+    <Compile Include="defuzzifier\strategies\msfMerging\MaxMsfMergingStrategyTest.cs" />
+    <Compile Include="defuzzifier\strategies\msfMerging\SumMsfMergingStrategyTest.cs" />
+    <Compile Include="defuzzifier\strategies\msfScaling\MinScaleStrategyTest.cs" />
+    <Compile Include="defuzzifier\strategies\msfScaling\ProdScaleStrategyTest.cs" />
+    <Compile Include="exceptions\UnresolvedVariableExceptionTest.cs" />
+    <Compile Include="expressions\AndExpressionTest.cs" />
+    <Compile Include="expressions\FuzzyImplicationTest.cs" />
+    <Compile Include="expressions\NotExpressionTest.cs" />
+    <Compile Include="expressions\OrExpressionTest.cs" />
+    <Compile Include="expressions\ValueExpressionTest.cs" />
+    <Compile Include="expressions\visitors\GetInvolvedVariablesTest.cs" />
+    <Compile Include="expressions\visitors\ToStringVisitorTest.cs" />
+    <Compile Include="fuzzifier\FuzzifierTest.cs" />
+    <Compile Include="FuzzyControllerTest.cs" />
+    <Compile Include="inference\evaluation\AlgebraicEvaluationTest.cs" />
+    <Compile Include="inference\evaluation\DrasticEvaluationTest.cs" />
+    <Compile Include="inference\evaluation\EinsteinEvaluationTest.cs" />
+    <Compile Include="inference\evaluation\HamacherEvaluationTest.cs" />
+    <Compile Include="inference\evaluation\LukasiewiczEvaluationTest.cs" />
+    <Compile Include="inference\evaluation\MinMaxEvaluationTest.cs" />
+    <Compile Include="inference\RuleEvaluationTest.cs" />
+    <Compile Include="inference\valueMerger\strategies\AverageValueStrategyTest.cs" />
+    <Compile Include="inference\valueMerger\FuzzyValueMergerTest.cs" />
+    <Compile Include="inference\valueMerger\strategies\MaxValueStrategyTest.cs" />
+    <Compile Include="inference\valueMerger\strategies\MinValueStrategyTest.cs" />
+    <Compile Include="inference\valueMerger\strategies\SumValueStrategyTest.cs" />
+    <Compile Include="math\LineSegmentTest.cs" />
+    <Compile Include="math\PointTest.cs" />
+    <Compile Include="variables\IterationTest.cs" />
+    <Compile Include="variables\MembershipFunctionTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="variables\FuzzyTermTest.cs" />
+    <Compile Include="variables\FuzzyValueTest.cs" />
+    <Compile Include="variables\FuzzyVariableTest.cs" />
+    <Compile Include="variables\NumericValueTest.cs" />
+    <Compile Include="variables\NumericVariableTest.cs" />
+    <Compile Include="variables\ScopeTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FuzzyController\FuzzyController.csproj">
+      <Project>{78286fad-1ef2-4914-98cb-7b7a519e61ba}</Project>
+      <Name>FuzzyController</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

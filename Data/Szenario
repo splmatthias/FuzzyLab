@@ -1,0 +1,1703 @@
+<?xml version="1.0"?>
+<situations>
+    <situation name="Situation 1" value="0">
+        <ball state="InGame" x="0" y="0"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1356" y="-775"/>
+            <player id="3" state="Available" x="-422" y="-6"/>
+            <player id="4" state="Available" x="-1513" y="1172"/>
+            <player id="5" state="Available" x="-2920" y="-74"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3529" y="-986"/>
+            <player id="3" state="Available" x="978" y="-385"/>
+            <player id="4" state="Available" x="1167" y="426"/>
+            <player id="5" state="Available" x="2552" y="849"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 2" value="0">
+        <ball state="InGame" x="-175" y="-920"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1052" y="-1668"/>
+            <player id="3" state="Available" x="-1419" y="-794"/>
+            <player id="4" state="Available" x="-3455" y="-1106"/>
+            <player id="5" state="Available" x="-2469" y="178"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="915" y="-1993"/>
+            <player id="3" state="Available" x="55" y="-1340"/>
+            <player id="4" state="Available" x="380" y="-738"/>
+            <player id="5" state="Available" x="1157" y="1542"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 3" value="0">
+        <ball state="InGame" x="-2181" y="-1006"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-957" y="-1941"/>
+            <player id="3" state="Available" x="-2605" y="-343"/>
+            <player id="4" state="Available" x="512" y="605"/>
+            <player id="5" state="Available" x="-768" y="-95"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1730" y="-1216"/>
+            <player id="3" state="Available" x="401" y="-846"/>
+            <player id="4" state="Available" x="474" y="1476"/>
+            <player id="5" state="Available" x="1629" y="-148"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 4" value="0">
+        <ball state="InGame" x="679" y="647"/>
+        <team>
+            <player id="1" state="Available" x="-4144" y="-32"/>
+            <player id="2" state="Available" x="-3193" y="-1164"/>
+            <player id="3" state="Available" x="1656" y="623"/>
+            <player id="4" state="Available" x="1216" y="-423"/>
+            <player id="5" state="Available" x="376" y="1846"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4322" y="84"/>
+            <player id="2" state="Available" x="3591" y="-986"/>
+            <player id="3" state="Available" x="2615" y="287"/>
+            <player id="4" state="Available" x="1063" y="920"/>
+            <player id="5" state="Available" x="1409" y="105"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 5" value="0">
+        <ball state="InGame" x="-1741" y="957"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1429" y="85"/>
+            <player id="3" state="Available" x="-600" y="528"/>
+            <player id="4" state="Available" x="-1933" y="1445"/>
+            <player id="5" state="Available" x="-3014" y="-210"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4248" y="178"/>
+            <player id="2" state="Available" x="2584" y="-377"/>
+            <player id="3" state="Available" x="-271" y="1410"/>
+            <player id="4" state="Available" x="-1352" y="668"/>
+            <player id="5" state="Available" x="-1772" y="1951"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 6" value="0">
+        <ball state="InGame" x="-1383" y="-438"/>
+        <team>
+            <player id="1" state="Available" x="-4332" y="42"/>
+            <player id="2" state="Available" x="-537" y="-1910"/>
+            <player id="3" state="Available" x="-1839" y="-385"/>
+            <player id="4" state="Available" x="-1072" y="689"/>
+            <player id="5" state="Available" x="-3675" y="-1019"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2752" y="-20"/>
+            <player id="3" state="Available" x="1388" y="-573"/>
+            <player id="4" state="Available" x="1629" y="500"/>
+            <player id="5" state="Available" x="401" y="2151"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 7" value="0">
+        <ball state="InGame" x="-385" y="-2463"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2353" y="-608"/>
+            <player id="3" state="Available" x="-1639" y="151"/>
+            <player id="4" state="Available" x="-2280" y="-1673"/>
+            <player id="5" state="Available" x="-3413" y="996"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1456" y="-1059"/>
+            <player id="3" state="Available" x="-900" y="571"/>
+            <player id="4" state="Available" x="-2265" y="-141"/>
+            <player id="5" state="Available" x="181" y="-1155"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 8" value="0">
+        <ball state="InGame" x="-838" y="-303"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1797" y="-1215"/>
+            <player id="3" state="Available" x="-1303" y="-342"/>
+            <player id="4" state="Available" x="-3676" y="-655"/>
+            <player id="5" state="Available" x="-1199" y="672"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3676" y="-944"/>
+            <player id="3" state="Available" x="-1646" y="-751"/>
+            <player id="4" state="Available" x="-974" y="1077"/>
+            <player id="5" state="Available" x="-1688" y="-295"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 9" value="0">
+        <ball state="InGame" x="3645" y="-910"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3780" y="-1038"/>
+            <player id="3" state="Available" x="3409" y="-1109"/>
+            <player id="4" state="Available" x="890" y="-917"/>
+            <player id="5" state="Available" x="3272" y="272"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4301" y="-472"/>
+            <player id="2" state="Available" x="3487" y="-1448"/>
+            <player id="3" state="Available" x="3266" y="-385"/>
+            <player id="4" state="Available" x="2143" y="500"/>
+            <player id="5" state="Available" x="1009" y="-420"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 10" value="0">
+        <ball state="InGame" x="0" y="0"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3717" y="-744"/>
+            <player id="3" state="Available" x="-370" y="-6"/>
+            <player id="4" state="Available" x="-758" y="-487"/>
+            <player id="5" state="Available" x="-1209" y="1174"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3728" y="-975"/>
+            <player id="3" state="Available" x="1167" y="-825"/>
+            <player id="4" state="Available" x="1450" y="49"/>
+            <player id="5" state="Available" x="1021" y="954"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 11" value="0">
+        <ball state="InGame" x="816" y="-2518"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-404" y="-2781"/>
+            <player id="3" state="Available" x="-2" y="-2331"/>
+            <player id="4" state="Available" x="-1219" y="-908"/>
+            <player id="5" state="Available" x="-2955" y="-596"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1346" y="-2410"/>
+            <player id="3" state="Available" x="881" y="-1897"/>
+            <player id="4" state="Available" x="3801" y="-612"/>
+            <player id="5" state="Available" x="2151" y="262"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 12" value="0">
+        <ball state="InGame" x="891" y="1632"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3950" y="-1119"/>
+            <player id="3" state="Available" x="-1410" y="294"/>
+            <player id="4" state="Available" x="-807" y="1336"/>
+            <player id="5" state="Available" x="-55" y="-426"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2394" y="-1214"/>
+            <player id="3" state="Available" x="1240" y="-288"/>
+            <player id="4" state="Available" x="1240" y="1146"/>
+            <player id="5" state="Available" x="1399" y="1849"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 13" value="0">
+        <ball state="InGame" x="-887" y="605"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1145" y="-696"/>
+            <player id="3" state="Available" x="-3252" y="-426"/>
+            <player id="4" state="Available" x="-2182" y="616"/>
+            <player id="5" state="Available" x="-1029" y="1765"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-887" y="-2124"/>
+            <player id="3" state="Available" x="2744" y="-870"/>
+            <player id="4" state="Available" x="-3089" y="870"/>
+            <player id="5" state="Available" x="1283" y="1108"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 14" value="0">
+        <ball state="InGame" x="-2528" y="-1015"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3230" y="-1595"/>
+            <player id="3" state="Available" x="-2500" y="-500"/>
+            <player id="4" state="Available" x="-796" y="585"/>
+            <player id="5" state="Available" x="-1971" y="1606"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1501" y="-1066"/>
+            <player id="3" state="Available" x="1611" y="-1907"/>
+            <player id="4" state="Available" x="1315" y="193"/>
+            <player id="5" state="Available" x="859" y="1574"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 15" value="0">
+        <ball state="InGame" x="3829" y="-786"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3979" y="-162"/>
+            <player id="3" state="Available" x="-1814" y="-2864"/>
+            <player id="4" state="Available" x="-4" y="1494"/>
+            <player id="5" state="Available" x="1768" y="-1335"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="4086" y="1312"/>
+            <player id="3" state="Available" x="767" y="-1910"/>
+            <player id="4" state="Available" x="-1349" y="-354"/>
+            <player id="5" state="Available" x="-2340" y="1997"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 16" value="0">
+        <ball state="InGame" x="1882" y="-560"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2600" y="1881"/>
+            <player id="3" state="Available" x="677" y="-383"/>
+            <player id="4" state="Available" x="-2145" y="-1810"/>
+            <player id="5" state="Available" x="-1923" y="-551"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="941" y="-1379"/>
+            <player id="3" state="Available" x="3387" y="857"/>
+            <player id="4" state="Available" x="-1597" y="469"/>
+            <player id="5" state="Available" x="1677" y="1347"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 17" value="0">
+        <ball state="InGame" x="2452" y="-1845"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-205" y="382"/>
+            <player id="3" state="Available" x="-1007" y="-389"/>
+            <player id="4" state="Available" x="3720" y="1449"/>
+            <player id="5" state="Available" x="2249" y="-550"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-941" y="309"/>
+            <player id="3" state="Available" x="-961" y="2212"/>
+            <player id="4" state="Available" x="3321" y="-698"/>
+            <player id="5" state="Available" x="2309" y="-1678"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 18" value="0">
+        <ball state="InGame" x="-1777" y="-2535"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-329" y="1003"/>
+            <player id="3" state="Available" x="2861" y="2466"/>
+            <player id="4" state="Available" x="3174" y="-18"/>
+            <player id="5" state="Available" x="-864" y="-1120"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-4216" y="-1134"/>
+            <player id="3" state="Available" x="2976" y="199"/>
+            <player id="4" state="Available" x="-1183" y="571"/>
+            <player id="5" state="Available" x="-1535" y="1775"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 19" value="0">
+        <ball state="InGame" x="-45" y="-60"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1054" y="665"/>
+            <player id="3" state="Available" x="1187" y="-911"/>
+            <player id="4" state="Available" x="-242" y="1998"/>
+            <player id="5" state="Available" x="-3980" y="-1228"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="244" y="-1197"/>
+            <player id="3" state="Available" x="3439" y="995"/>
+            <player id="4" state="Available" x="-1095" y="-2095"/>
+            <player id="5" state="Available" x="29" y="464"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 20" value="0">
+        <ball state="InGame" x="3527" y="2240"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3992" y="2131"/>
+            <player id="3" state="Available" x="-3903" y="-734"/>
+            <player id="4" state="Available" x="3222" y="-738"/>
+            <player id="5" state="Available" x="-2344" y="2234"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3752" y="1791"/>
+            <player id="3" state="Available" x="1244" y="-1181"/>
+            <player id="4" state="Available" x="2962" y="857"/>
+            <player id="5" state="Available" x="1779" y="-1170"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 21" value="0">
+        <ball state="InGame" x="-3839" y="854"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1217" y="1290"/>
+            <player id="3" state="Available" x="953" y="1030"/>
+            <player id="4" state="Available" x="-3258" y="-2062"/>
+            <player id="5" state="Available" x="2057" y="-2645"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-2891" y="587"/>
+            <player id="3" state="Available" x="-2523" y="1292"/>
+            <player id="4" state="Available" x="-616" y="2225"/>
+            <player id="5" state="Available" x="-30" y="593"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 22" value="0">
+        <ball state="InGame" x="2492" y="-2483"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-400" y="-609"/>
+            <player id="3" state="Available" x="3766" y="-2132"/>
+            <player id="4" state="Available" x="3408" y="1503"/>
+            <player id="5" state="Available" x="377" y="896"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2919" y="-869"/>
+            <player id="3" state="Available" x="3469" y="2199"/>
+            <player id="4" state="Available" x="3886" y="-523"/>
+            <player id="5" state="Available" x="3917" y="-218"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 23" value="0">
+        <ball state="InGame" x="-1131" y="1714"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3885" y="-1080"/>
+            <player id="3" state="Available" x="-1525" y="2081"/>
+            <player id="4" state="Available" x="2665" y="2248"/>
+            <player id="5" state="Available" x="-3087" y="-702"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2384" y="-939"/>
+            <player id="3" state="Available" x="2720" y="-1814"/>
+            <player id="4" state="Available" x="2976" y="679"/>
+            <player id="5" state="Available" x="-1224" y="2797"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 24" value="0">
+        <ball state="InGame" x="-2350" y="-1501"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1845" y="-1485"/>
+            <player id="3" state="Available" x="4152" y="-1083"/>
+            <player id="4" state="Available" x="-818" y="121"/>
+            <player id="5" state="Available" x="3190" y="-331"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="734" y="-1295"/>
+            <player id="3" state="Available" x="-1216" y="1984"/>
+            <player id="4" state="Available" x="895" y="-1916"/>
+            <player id="5" state="Available" x="2497" y="-1957"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 25" value="0">
+        <ball state="InGame" x="192" y="1297"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-18" y="1008"/>
+            <player id="3" state="Available" x="-3327" y="-346"/>
+            <player id="4" state="Available" x="-2197" y="-2577"/>
+            <player id="5" state="Available" x="-495" y="-1013"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-320" y="-2022"/>
+            <player id="3" state="Available" x="594" y="1235"/>
+            <player id="4" state="Available" x="-161" y="1236"/>
+            <player id="5" state="Available" x="439" y="2650"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 26" value="0">
+        <ball state="InGame" x="-797" y="1957"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1289" y="-640"/>
+            <player id="3" state="Available" x="3274" y="2288"/>
+            <player id="4" state="Available" x="2144" y="2645"/>
+            <player id="5" state="Available" x="-3125" y="-1328"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1261" y="-2272"/>
+            <player id="3" state="Available" x="1864" y="1623"/>
+            <player id="4" state="Available" x="1276" y="105"/>
+            <player id="5" state="Available" x="-1012" y="2448"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 27" value="0">
+        <ball state="InGame" x="3605" y="-1836"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1980" y="-1752"/>
+            <player id="3" state="Available" x="3599" y="-2289"/>
+            <player id="4" state="Available" x="793" y="1047"/>
+            <player id="5" state="Available" x="-1524" y="-1156"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2148" y="1799"/>
+            <player id="3" state="Available" x="858" y="-290"/>
+            <player id="4" state="Available" x="4158" y="-2075"/>
+            <player id="5" state="Available" x="-2673" y="-1854"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 28" value="0">
+        <ball state="InGame" x="-3563" y="2412"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-4217" y="2913"/>
+            <player id="3" state="Available" x="-3961" y="-599"/>
+            <player id="4" state="Available" x="-2988" y="-423"/>
+            <player id="5" state="Available" x="-2099" y="2035"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-4252" y="2417"/>
+            <player id="3" state="Available" x="-3396" y="2670"/>
+            <player id="4" state="Available" x="-2243" y="-2167"/>
+            <player id="5" state="Available" x="1270" y="-481"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 29" value="0">
+        <ball state="InGame" x="0" y="0"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-192" y="-558"/>
+            <player id="3" state="Available" x="-234" y="-161"/>
+            <player id="4" state="Available" x="-246" y="331"/>
+            <player id="5" state="Available" x="-3611" y="-321"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="478" y="-1193"/>
+            <player id="3" state="Available" x="2955" y="-172"/>
+            <player id="4" state="Available" x="1950" y="511"/>
+            <player id="5" state="Available" x="4077" y="346"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 30" value="0">
+        <ball state="InGame" x="2965" y="1188"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="347" y="257"/>
+            <player id="3" state="Available" x="-372" y="-659"/>
+            <player id="4" state="Available" x="474" y="-93"/>
+            <player id="5" state="Available" x="-3664" y="-448"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="425" y="-1214"/>
+            <player id="3" state="Available" x="2172" y="-468"/>
+            <player id="4" state="Available" x="1611" y="98"/>
+            <player id="5" state="Available" x="3601" y="1013"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 31" value="0">
+        <ball state="InGame" x="2817" y="933"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="368" y="-103"/>
+            <player id="3" state="Available" x="146" y="664"/>
+            <player id="4" state="Available" x="2675" y="1072"/>
+            <player id="5" state="Available" x="-3696" y="-501"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4373" y="-138"/>
+            <player id="2" state="Available" x="2373" y="77"/>
+            <player id="3" state="Available" x="3156" y="845"/>
+            <player id="4" state="Available" x="-263" y="564"/>
+            <player id="5" state="Penalized" x="1812" y="-3263"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 32" value="0">
+        <ball state="InGame" x="2806" y="-846"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1871" y="-748"/>
+            <player id="3" state="Available" x="739" y="-564"/>
+            <player id="4" state="Available" x="-3738" y="-590"/>
+            <player id="5" state="Available" x="2623" y="971"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4352" y="-413"/>
+            <player id="2" state="Available" x="2638" y="-82"/>
+            <player id="3" state="Available" x="838" y="-214"/>
+            <player id="4" state="Available" x="3072" y="987"/>
+            <player id="5" state="Penalized" x="954" y="-3232"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 33" value="0">
+        <ball state="InGame" x="3028" y="-1989"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Disabled" x="2803" y="-2230"/>
+            <player id="3" state="Available" x="-3124" y="-542"/>
+            <player id="4" state="Available" x="-150" y="1813"/>
+            <player id="5" state="Available" x="-2585" y="2865"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1230" y="-2156"/>
+            <player id="3" state="Available" x="3282" y="-1770"/>
+            <player id="4" state="Available" x="3135" y="-50"/>
+            <player id="5" state="Available" x="3220" y="1648"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 34" value="0">
+        <ball state="InGame" x="1610" y="-1163"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1639" y="-1510"/>
+            <player id="3" state="Available" x="-3230" y="-765"/>
+            <player id="4" state="Available" x="484" y="490"/>
+            <player id="5" state="Available" x="-76" y="1796"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1876" y="-1235"/>
+            <player id="3" state="Available" x="3844" y="-1050"/>
+            <player id="4" state="Available" x="2691" y="384"/>
+            <player id="5" state="Available" x="2870" y="1479"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 35" value="0">
+        <ball state="InGame" x="2533" y="-230"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2051" y="755"/>
+            <player id="3" state="Available" x="2570" y="146"/>
+            <player id="4" state="Available" x="1861" y="-294"/>
+            <player id="5" state="Available" x="-3516" y="-564"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4309" y="42"/>
+            <player id="2" state="Available" x="3664" y="-1193"/>
+            <player id="3" state="Available" x="2161" y="-405"/>
+            <player id="4" state="Available" x="2447" y="532"/>
+            <player id="5" state="Available" x="3284" y="780"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 36" value="0">
+        <ball state="InGame" x="1832" y="-380"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Disabled" x="1554" y="-685"/>
+            <player id="3" state="Available" x="-3622" y="-532"/>
+            <player id="4" state="Available" x="3427" y="405"/>
+            <player id="5" state="Available" x="1046" y="367"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3897" y="-1024"/>
+            <player id="3" state="Available" x="3008" y="1553"/>
+            <player id="4" state="Available" x="2003" y="-865"/>
+            <player id="5" state="Available" x="2151" y="-458"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 37" value="0">
+        <ball state="InGame" x="-3323" y="1366"/>
+        <team>
+            <player id="1" state="Available" x="-4352" y="191"/>
+            <player id="2" state="Available" x="1533" y="1898"/>
+            <player id="3" state="Available" x="-3050" y="379"/>
+            <player id="4" state="Available" x="-2648" y="828"/>
+            <player id="5" state="Available" x="1575" y="886"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4235" y="127"/>
+            <player id="2" state="Available" x="-1469" y="-336"/>
+            <player id="3" state="Available" x="-2358" y="1119"/>
+            <player id="4" state="Available" x="2669" y="-453"/>
+            <player id="5" state="Available" x="3241" y="823"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 38" value="0">
+        <ball state="InGame" x="-19" y="880"/>
+        <team>
+            <player id="1" state="Available" x="-4288" y="-582"/>
+            <player id="2" state="Available" x="-2881" y="-1680"/>
+            <player id="3" state="Available" x="580" y="-203"/>
+            <player id="4" state="Available" x="-382" y="1168"/>
+            <player id="5" state="Available" x="-1484" y="1775"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Disabled" x="860" y="-336"/>
+            <player id="3" state="Available" x="-40" y="146"/>
+            <player id="4" state="Available" x="489" y="966"/>
+            <player id="5" state="Available" x="3611" y="908"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 39" value="0">
+        <ball state="InGame" x="4246" y="573"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="813" y="553"/>
+            <player id="3" state="Available" x="3862" y="517"/>
+            <player id="4" state="Available" x="-679" y="-29"/>
+            <player id="5" state="Available" x="-3537" y="-765"/>
+        </team>
+        <opponents>
+            <player id="1" state="Disabled" x="4309" y="233"/>
+            <player id="2" state="Available" x="764" y="-442"/>
+            <player id="3" state="Available" x="3558" y="-172"/>
+            <player id="4" state="Available" x="224" y="-982"/>
+            <player id="5" state="Available" x="-379" y="1288"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 40" value="0">
+        <ball state="InGame" x="-4191" y="837"/>
+        <team>
+            <player id="1" state="Available" x="-4384" y="614"/>
+            <player id="2" state="Available" x="-1505" y="-1278"/>
+            <player id="3" state="Available" x="-3357" y="-786"/>
+            <player id="4" state="Available" x="-4310" y="1061"/>
+            <player id="5" state="Available" x="-3029" y="1648"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3798" y="543"/>
+            <player id="3" state="Available" x="193" y="19"/>
+            <player id="4" state="Available" x="-3375" y="161"/>
+            <player id="5" state="Available" x="3336" y="-14"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 41" value="0">
+        <ball state="InGame" x="-2110" y="79"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2211" y="51"/>
+            <player id="3" state="Available" x="2553" y="301"/>
+            <player id="4" state="Available" x="-211" y="-1110"/>
+            <player id="5" state="Available" x="3416" y="-505"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1301" y="-936"/>
+            <player id="3" state="Available" x="3117" y="-347"/>
+            <player id="4" state="Available" x="3618" y="1015"/>
+            <player id="5" state="Available" x="-1679" y="254"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 42" value="0">
+        <ball state="InGame" x="-1289" y="375"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3702" y="561"/>
+            <player id="3" state="Available" x="2625" y="-1216"/>
+            <player id="4" state="Available" x="-3039" y="1798"/>
+            <player id="5" state="Available" x="440" y="1268"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3152" y="1057"/>
+            <player id="3" state="Available" x="3592" y="-453"/>
+            <player id="4" state="Available" x="-3833" y="-96"/>
+            <player id="5" state="Available" x="-318" y="-1136"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 43" value="0">
+        <ball state="InGame" x="2130" y="-764"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2256" y="2742"/>
+            <player id="3" state="Penalized" x="-1226" y="3190"/>
+            <player id="4" state="Available" x="1230" y="-591"/>
+            <player id="5" state="Available" x="2804" y="-1099"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Penalized" x="697" y="3220"/>
+            <player id="3" state="Available" x="4207" y="-700"/>
+            <player id="4" state="Available" x="3462" y="759"/>
+            <player id="5" state="Available" x="2014" y="1330"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 44" value="0">
+        <ball state="InGame" x="3459" y="1175"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3739" y="729"/>
+            <player id="3" state="Available" x="-1420" y="-1899"/>
+            <player id="4" state="Available" x="2789" y="-1207"/>
+            <player id="5" state="Available" x="-2012" y="1321"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-523" y="7"/>
+            <player id="3" state="Available" x="4177" y="309"/>
+            <player id="4" state="Available" x="-167" y="503"/>
+            <player id="5" state="Available" x="-607" y="-1856"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 45" value="0">
+        <ball state="InGame" x="-79" y="384"/>
+        <team>
+            <player id="1" state="Available" x="-4299" y="360"/>
+            <player id="2" state="Available" x="-1625" y="1112"/>
+            <player id="3" state="Available" x="-2890" y="2636"/>
+            <player id="4" state="Available" x="-212" y="-826"/>
+            <player id="5" state="Available" x="-3497" y="-37"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4066" y="84"/>
+            <player id="2" state="Available" x="149" y="-1971"/>
+            <player id="3" state="Available" x="-1015" y="-2230"/>
+            <player id="4" state="Available" x="1277" y="-212"/>
+            <player id="5" state="Available" x="1548" y="-2604"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 46" value="0">
+        <ball state="InGame" x="-349" y="-2028"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1657" y="-2688"/>
+            <player id="3" state="Available" x="-1144" y="-1269"/>
+            <player id="4" state="Available" x="-2754" y="-1694"/>
+            <player id="5" state="Available" x="2370" y="247"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="173" y="1984"/>
+            <player id="3" state="Available" x="-1412" y="2042"/>
+            <player id="4" state="Available" x="1103" y="-221"/>
+            <player id="5" state="Available" x="1016" y="-1582"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 47" value="0">
+        <ball state="InGame" x="2155" y="1609"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-995" y="-860"/>
+            <player id="3" state="Available" x="-2089" y="888"/>
+            <player id="4" state="Available" x="-729" y="-1047"/>
+            <player id="5" state="Available" x="-1759" y="1564"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3034" y="-2376"/>
+            <player id="3" state="Available" x="1084" y="2510"/>
+            <player id="4" state="Available" x="-2710" y="1551"/>
+            <player id="5" state="Available" x="-1413" y="713"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 48" value="0">
+        <ball state="InGame" x="-932" y="-2169"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2712" y="-2029"/>
+            <player id="3" state="Available" x="-1067" y="-1372"/>
+            <player id="4" state="Available" x="-1266" y="-2357"/>
+            <player id="5" state="Available" x="2006" y="1323"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4331" y="-127"/>
+            <player id="2" state="Available" x="-2572" y="-476"/>
+            <player id="3" state="Available" x="-3236" y="-1686"/>
+            <player id="4" state="Disabled" x="3362" y="514"/>
+            <player id="5" state="Available" x="-3944" y="-433"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 49" value="0">
+        <ball state="InGame" x="1306" y="-2551"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2716" y="896"/>
+            <player id="3" state="Available" x="2759" y="-561"/>
+            <player id="4" state="Available" x="2338" y="-2780"/>
+            <player id="5" state="Available" x="959" y="-2886"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3273" y="855"/>
+            <player id="3" state="Available" x="1754" y="-2056"/>
+            <player id="4" state="Available" x="-3335" y="-2017"/>
+            <player id="5" state="Available" x="2013" y="-2397"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 50" value="0">
+        <ball state="InGame" x="-166" y="-1493"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-466" y="-1644"/>
+            <player id="3" state="Available" x="-787" y="-1101"/>
+            <player id="4" state="Available" x="2228" y="-765"/>
+            <player id="5" state="Available" x="-898" y="641"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4341" y="212"/>
+            <player id="2" state="Available" x="668" y="425"/>
+            <player id="3" state="Available" x="-969" y="-2116"/>
+            <player id="4" state="Available" x="-43" y="1087"/>
+            <player id="5" state="Available" x="4160" y="-526"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 51" value="0">
+        <ball state="InGame" x="-2005" y="-1284"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-538" y="-1715"/>
+            <player id="3" state="Available" x="-1945" y="1621"/>
+            <player id="4" state="Available" x="4050" y="-543"/>
+            <player id="5" state="Available" x="-3025" y="2589"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1625" y="-1389"/>
+            <player id="3" state="Available" x="-3420" y="752"/>
+            <player id="4" state="Available" x="-3785" y="2525"/>
+            <player id="5" state="Available" x="-1244" y="-620"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 52" value="0">
+        <ball state="InGame" x="2187" y="1278"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1988" y="618"/>
+            <player id="3" state="Available" x="1220" y="-2416"/>
+            <player id="4" state="Available" x="1021" y="471"/>
+            <player id="5" state="Available" x="-577" y="-220"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-2457" y="250"/>
+            <player id="3" state="Available" x="3565" y="-1334"/>
+            <player id="4" state="Available" x="-960" y="1430"/>
+            <player id="5" state="Available" x="-1971" y="-2471"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 53" value="0">
+        <ball state="InGame" x="-2465" y="-1189"/>
+        <team>
+            <player id="1" state="Available" x="-4140" y="-11"/>
+            <player id="2" state="Available" x="-302" y="-1353"/>
+            <player id="3" state="Available" x="-996" y="-2017"/>
+            <player id="4" state="Available" x="-678" y="998"/>
+            <player id="5" state="Available" x="-4489" y="1081"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-162" y="162"/>
+            <player id="3" state="Available" x="-2927" y="-21"/>
+            <player id="4" state="Available" x="-2266" y="-1290"/>
+            <player id="5" state="Available" x="3625" y="246"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 54" value="0">
+        <ball state="InGame" x="-79" y="2520"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1920" y="2084"/>
+            <player id="3" state="Available" x="-282" y="2430"/>
+            <player id="4" state="Available" x="-4024" y="-860"/>
+            <player id="5" state="Available" x="-1410" y="2312"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3765" y="-884"/>
+            <player id="3" state="Available" x="-957" y="1417"/>
+            <player id="4" state="Available" x="4027" y="2322"/>
+            <player id="5" state="Available" x="-2857" y="1323"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 55" value="0">
+        <ball state="InGame" x="-1507" y="1310"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1132" y="-2257"/>
+            <player id="3" state="Available" x="229" y="-2291"/>
+            <player id="4" state="Available" x="-3611" y="-328"/>
+            <player id="5" state="Available" x="-717" y="-1475"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3849" y="-241"/>
+            <player id="3" state="Available" x="4139" y="-760"/>
+            <player id="4" state="Available" x="164" y="-1414"/>
+            <player id="5" state="Available" x="385" y="-1938"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 56" value="0">
+        <ball state="InGame" x="-2431" y="-2099"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2269" y="-1594"/>
+            <player id="3" state="Available" x="-3378" y="971"/>
+            <player id="4" state="Available" x="-1457" y="2722"/>
+            <player id="5" state="Available" x="1001" y="861"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2611" y="1239"/>
+            <player id="3" state="Available" x="2500" y="-1653"/>
+            <player id="4" state="Available" x="-2152" y="-1925"/>
+            <player id="5" state="Available" x="1459" y="-2765"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 57" value="0">
+        <ball state="InGame" x="996" y="-365"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3821" y="-1574"/>
+            <player id="3" state="Available" x="743" y="-148"/>
+            <player id="4" state="Available" x="2480" y="-414"/>
+            <player id="5" state="Available" x="889" y="-98"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-469" y="-417"/>
+            <player id="3" state="Available" x="3183" y="-2073"/>
+            <player id="4" state="Available" x="-494" y="2779"/>
+            <player id="5" state="Available" x="1561" y="385"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 58" value="0">
+        <ball state="InGame" x="1020" y="1392"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="4082" y="1509"/>
+            <player id="3" state="Available" x="-2657" y="-2597"/>
+            <player id="4" state="Available" x="3003" y="-1117"/>
+            <player id="5" state="Available" x="703" y="1124"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1267" y="1716"/>
+            <player id="3" state="Available" x="-1698" y="-1376"/>
+            <player id="4" state="Available" x="-1428" y="445"/>
+            <player id="5" state="Available" x="1702" y="-1523"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 59" value="0">
+        <ball state="InGame" x="2700" y="-1309"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-101" y="-1960"/>
+            <player id="3" state="Available" x="516" y="1773"/>
+            <player id="4" state="Available" x="2511" y="1928"/>
+            <player id="5" state="Available" x="1051" y="-1242"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="469" y="-2432"/>
+            <player id="3" state="Available" x="4200" y="-550"/>
+            <player id="4" state="Available" x="-2772" y="366"/>
+            <player id="5" state="Available" x="3109" y="-1511"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 60" value="0">
+        <ball state="InGame" x="-359" y="613"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1114" y="-438"/>
+            <player id="3" state="Available" x="552" y="1015"/>
+            <player id="4" state="Available" x="3188" y="127"/>
+            <player id="5" state="Available" x="-2708" y="364"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="496" y="-167"/>
+            <player id="3" state="Available" x="-762" y="2504"/>
+            <player id="4" state="Available" x="741" y="2395"/>
+            <player id="5" state="Available" x="391" y="-2578"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 61" value="0">
+        <ball state="InGame" x="-2263" y="1952"/>
+        <team>
+            <player id="1" state="Available" x="-4055" y="-508"/>
+            <player id="2" state="Available" x="3070" y="1762"/>
+            <player id="3" state="Available" x="1810" y="2193"/>
+            <player id="4" state="Available" x="-1070" y="-2014"/>
+            <player id="5" state="Available" x="935" y="984"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1829" y="-1159"/>
+            <player id="3" state="Available" x="840" y="-1917"/>
+            <player id="4" state="Available" x="-1905" y="1900"/>
+            <player id="5" state="Available" x="392" y="2254"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 62" value="0">
+        <ball state="InGame" x="-963" y="196"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-258" y="-1041"/>
+            <player id="3" state="Available" x="470" y="-120"/>
+            <player id="4" state="Available" x="-2508" y="823"/>
+            <player id="5" state="Available" x="1163" y="2801"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3691" y="-1496"/>
+            <player id="3" state="Available" x="1026" y="2181"/>
+            <player id="4" state="Available" x="-1409" y="2697"/>
+            <player id="5" state="Available" x="-341" y="194"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 63" value="0">
+        <ball state="InGame" x="3821" y="1344"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1584" y="1272"/>
+            <player id="3" state="Available" x="-556" y="-2073"/>
+            <player id="4" state="Available" x="-1310" y="678"/>
+            <player id="5" state="Available" x="3593" y="1812"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4267" y="508"/>
+            <player id="2" state="Available" x="1101" y="-2211"/>
+            <player id="3" state="Available" x="-653" y="1321"/>
+            <player id="4" state="Available" x="279" y="2311"/>
+            <player id="5" state="Available" x="2384" y="733"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 64" value="0">
+        <ball state="InGame" x="-1250" y="-2299"/>
+        <team>
+            <player id="1" state="Available" x="-4384" y="106"/>
+            <player id="2" state="Available" x="-3648" y="-611"/>
+            <player id="3" state="Available" x="650" y="-2173"/>
+            <player id="4" state="Available" x="-1549" y="-515"/>
+            <player id="5" state="Available" x="2442" y="-2107"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1863" y="-401"/>
+            <player id="3" state="Available" x="4170" y="862"/>
+            <player id="4" state="Available" x="1034" y="-1100"/>
+            <player id="5" state="Available" x="-1614" y="-1741"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 65" value="0">
+        <ball state="InGame" x="-3260" y="330"/>
+        <team>
+            <player id="1" state="Available" x="-3727" y="296"/>
+            <player id="2" state="Available" x="2868" y="228"/>
+            <player id="3" state="Available" x="-2537" y="-284"/>
+            <player id="4" state="Available" x="-1052" y="-1767"/>
+            <player id="5" state="Available" x="-2234" y="2117"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4267" y="148"/>
+            <player id="2" state="Available" x="762" y="2024"/>
+            <player id="3" state="Available" x="149" y="-2336"/>
+            <player id="4" state="Available" x="-904" y="-1073"/>
+            <player id="5" state="Available" x="3355" y="-300"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 66" value="0">
+        <ball state="InGame" x="653" y="-1232"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1103" y="49"/>
+            <player id="3" state="Available" x="525" y="-827"/>
+            <player id="4" state="Available" x="-3238" y="-1602"/>
+            <player id="5" state="Available" x="-3626" y="854"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2466" y="2071"/>
+            <player id="3" state="Available" x="4144" y="1048"/>
+            <player id="4" state="Available" x="-1666" y="847"/>
+            <player id="5" state="Available" x="-249" y="-1791"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 67" value="0">
+        <ball state="InGame" x="-3643" y="-557"/>
+        <team>
+            <player id="1" state="Available" x="-4257" y="-222"/>
+            <player id="2" state="Available" x="1454" y="-1469"/>
+            <player id="3" state="Available" x="-179" y="567"/>
+            <player id="4" state="Available" x="-950" y="-531"/>
+            <player id="5" state="Available" x="3325" y="631"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3062" y="-645"/>
+            <player id="3" state="Available" x="952" y="450"/>
+            <player id="4" state="Available" x="-331" y="1860"/>
+            <player id="5" state="Available" x="-1571" y="673"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 68" value="0">
+        <ball state="InGame" x="2879" y="-1048"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3400" y="1248"/>
+            <player id="3" state="Available" x="-1522" y="-1066"/>
+            <player id="4" state="Available" x="1489" y="851"/>
+            <player id="5" state="Available" x="2338" y="-1330"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="2595" y="370"/>
+            <player id="2" state="Available" x="1804" y="-2100"/>
+            <player id="3" state="Available" x="-1882" y="-116"/>
+            <player id="4" state="Available" x="-2298" y="1054"/>
+            <player id="5" state="Available" x="-3555" y="1299"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 69" value="0">
+        <ball state="InGame" x="4036" y="-104"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="3621" y="162"/>
+            <player id="3" state="Available" x="1541" y="59"/>
+            <player id="4" state="Available" x="2008" y="-1272"/>
+            <player id="5" state="Available" x="-3726" y="667"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3174" y="352"/>
+            <player id="3" state="Available" x="1107" y="469"/>
+            <player id="4" state="Available" x="2109" y="-1621"/>
+            <player id="5" state="Available" x="4338" y="-523"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 70" value="0">
+        <ball state="InGame" x="-2113" y="-1231"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2604" y="-1446"/>
+            <player id="3" state="Available" x="-1505" y="1605"/>
+            <player id="4" state="Available" x="-3152" y="-1729"/>
+            <player id="5" state="Available" x="-1940" y="361"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3471" y="280"/>
+            <player id="3" state="Available" x="-3804" y="-1932"/>
+            <player id="4" state="Available" x="-2737" y="-436"/>
+            <player id="5" state="Available" x="3974" y="620"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 71" value="0">
+        <ball state="InGame" x="-2489" y="-2798"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1930" y="-1100"/>
+            <player id="3" state="Available" x="-2562" y="1775"/>
+            <player id="4" state="Available" x="-2839" y="-2178"/>
+            <player id="5" state="Available" x="2292" y="-2201"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-2833" y="463"/>
+            <player id="3" state="Available" x="2358" y="529"/>
+            <player id="4" state="Available" x="-509" y="1556"/>
+            <player id="5" state="Available" x="-3894" y="-1593"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 72" value="0">
+        <ball state="InGame" x="28" y="-1151"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1450" y="-306"/>
+            <player id="3" state="Available" x="-523" y="1667"/>
+            <player id="4" state="Available" x="-1154" y="-2243"/>
+            <player id="5" state="Available" x="-3480" y="480"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-2582" y="-1004"/>
+            <player id="3" state="Available" x="3049" y="1213"/>
+            <player id="4" state="Available" x="-1760" y="701"/>
+            <player id="5" state="Available" x="-708" y="871"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 73" value="0">
+        <ball state="InGame" x="-280" y="-528"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-962" y="-133"/>
+            <player id="3" state="Available" x="265" y="-934"/>
+            <player id="4" state="Available" x="-1039" y="-499"/>
+            <player id="5" state="Available" x="1009" y="1133"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-276" y="-952"/>
+            <player id="3" state="Available" x="856" y="-443"/>
+            <player id="4" state="Available" x="3769" y="-841"/>
+            <player id="5" state="Available" x="-193" y="-186"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 74" value="0">
+        <ball state="InGame" x="-965" y="-290"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1067" y="1545"/>
+            <player id="3" state="Available" x="-343" y="4"/>
+            <player id="4" state="Available" x="-483" y="-753"/>
+            <player id="5" state="Available" x="203" y="-40"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-90" y="611"/>
+            <player id="3" state="Available" x="-2270" y="-228"/>
+            <player id="4" state="Available" x="772" y="-801"/>
+            <player id="5" state="Available" x="-657" y="1838"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 75" value="0">
+        <ball state="InGame" x="1314" y="985"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1470" y="692"/>
+            <player id="3" state="Available" x="738" y="1505"/>
+            <player id="4" state="Available" x="2600" y="557"/>
+            <player id="5" state="Available" x="-2758" y="-1216"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3972" y="299"/>
+            <player id="3" state="Available" x="-1038" y="1579"/>
+            <player id="4" state="Available" x="2482" y="1119"/>
+            <player id="5" state="Available" x="1261" y="2451"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 76" value="0">
+        <ball state="InGame" x="-471" y="-2007"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-860" y="-1927"/>
+            <player id="3" state="Available" x="-2110" y="-1300"/>
+            <player id="4" state="Available" x="3062" y="-358"/>
+            <player id="5" state="Available" x="717" y="-442"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-842" y="89"/>
+            <player id="3" state="Available" x="3523" y="574"/>
+            <player id="4" state="Available" x="237" y="472"/>
+            <player id="5" state="Available" x="-1382" y="-682"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 77" value="0">
+        <ball state="InGame" x="-2661" y="-302"/>
+        <team>
+            <player id="1" state="Available" x="-4204" y="-265"/>
+            <player id="2" state="Available" x="-465" y="-1765"/>
+            <player id="3" state="Available" x="-2551" y="-1063"/>
+            <player id="4" state="Available" x="-2035" y="-2017"/>
+            <player id="5" state="Available" x="-3797" y="-1369"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1567" y="1967"/>
+            <player id="3" state="Available" x="-2343" y="-297"/>
+            <player id="4" state="Available" x="-1724" y="761"/>
+            <player id="5" state="Available" x="3619" y="1075"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 78" value="0">
+        <ball state="InGame" x="0" y="0"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-870" y="-611"/>
+            <player id="3" state="Available" x="-87" y="-352"/>
+            <player id="4" state="Available" x="30" y="976"/>
+            <player id="5" state="Available" x="-3929" y="-691"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-146" y="-1373"/>
+            <player id="3" state="Available" x="1135" y="-130"/>
+            <player id="4" state="Available" x="3654" y="-781"/>
+            <player id="5" state="Available" x="1759" y="833"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 79" value="0">
+        <ball state="InGame" x="-3237" y="838"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1808" y="-50"/>
+            <player id="3" state="Available" x="-2108" y="-394"/>
+            <player id="4" state="Available" x="-3516" y="-167"/>
+            <player id="5" state="Available" x="-193" y="-416"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3569" y="-960"/>
+            <player id="3" state="Available" x="-2221" y="-1315"/>
+            <player id="4" state="Available" x="139" y="-8"/>
+            <player id="5" state="Available" x="277" y="918"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 80" value="0">
+        <ball state="InGame" x="-3058" y="541"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-66" y="702"/>
+            <player id="3" state="Available" x="-3696" y="156"/>
+            <player id="4" state="Available" x="-2955" y="98"/>
+            <player id="5" state="Available" x="-330" y="-299"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Disabled" x="-2041" y="88"/>
+            <player id="3" state="Available" x="-2549" y="802"/>
+            <player id="4" state="Available" x="3643" y="-685"/>
+            <player id="5" state="Available" x="2013" y="1257"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 81" value="0">
+        <ball state="InGame" x="-3683" y="160"/>
+        <team>
+            <player id="1" state="Available" x="-4214" y="328"/>
+            <player id="2" state="Available" x="-3357" y="-547"/>
+            <player id="3" state="Available" x="-3685" y="-405"/>
+            <player id="4" state="Available" x="-1505" y="-1024"/>
+            <player id="5" state="Available" x="898" y="473"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3834" y="-674"/>
+            <player id="3" state="Available" x="-3406" y="336"/>
+            <player id="4" state="Available" x="-824" y="-516"/>
+            <player id="5" state="Available" x="-2803" y="780"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 82" value="0">
+        <ball state="InGame" x="0" y="0"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3813" y="-1098"/>
+            <player id="3" state="Available" x="-616" y="-1527"/>
+            <player id="4" state="Available" x="-267" y="-8"/>
+            <player id="5" state="Available" x="-849" y="1743"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="701" y="-1235"/>
+            <player id="3" state="Available" x="1071" y="-24"/>
+            <player id="4" state="Available" x="3707" y="172"/>
+            <player id="5" state="Available" x="531" y="1257"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 83" value="0">
+        <ball state="InGame" x="1440" y="-2116"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2574" y="-2061"/>
+            <player id="3" state="Available" x="-775" y="-1675"/>
+            <player id="4" state="Available" x="-2151" y="-1342"/>
+            <player id="5" state="Available" x="-3717" y="-575"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3110" y="-1362"/>
+            <player id="3" state="Available" x="-1797" y="-1844"/>
+            <player id="4" state="Available" x="267" y="-495"/>
+            <player id="5" state="Available" x="3696" y="-680"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 84" value="0">
+        <ball state="InGame" x="-3153" y="-920"/>
+        <team>
+            <player id="1" state="Available" x="-4267" y="360"/>
+            <player id="2" state="Available" x="1713" y="490"/>
+            <player id="3" state="Available" x="2041" y="-447"/>
+            <player id="4" state="Available" x="-3421" y="521"/>
+            <player id="5" state="Available" x="665" y="357"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-2707" y="-696"/>
+            <player id="3" state="Available" x="2500" y="-500"/>
+            <player id="4" state="Available" x="669" y="-400"/>
+            <player id="5" state="Available" x="1060" y="1521"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 85" value="0">
+        <ball state="InGame" x="-3503" y="-1322"/>
+        <team>
+            <player id="1" state="NotPlaying" x="-3621" y="-339"/>
+            <player id="2" state="Available" x="-2447" y="-2368"/>
+            <player id="3" state="Available" x="-1971" y="-1749"/>
+            <player id="4" state="Available" x="1850" y="-484"/>
+            <player id="5" state="Available" x="1575" y="262"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3078" y="-1902"/>
+            <player id="3" state="Available" x="1124" y="-892"/>
+            <player id="4" state="Available" x="1071" y="765"/>
+            <player id="5" state="Available" x="3146" y="-141"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 86" value="0">
+        <ball state="InGame" x="-4296" y="-168"/>
+        <team>
+            <player id="1" state="NotPlaying" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3050" y="-1786"/>
+            <player id="3" state="Available" x="-1018" y="-405"/>
+            <player id="4" state="Available" x="1142" y="-145"/>
+            <player id="5" state="Disabled" x="-2564" y="-2385"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2986" y="-695"/>
+            <player id="3" state="Available" x="-4020" y="-511"/>
+            <player id="4" state="Available" x="-1765" y="119"/>
+            <player id="5" state="Available" x="330" y="484"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 87" value="0">
+        <ball state="InGame" x="-4174" y="-475"/>
+        <team>
+            <player id="1" state="Available" x="-3727" y="-212"/>
+            <player id="2" state="Available" x="-2322" y="-486"/>
+            <player id="3" state="Available" x="-1907" y="-2174"/>
+            <player id="4" state="Available" x="-2197" y="-2169"/>
+            <player id="5" state="Available" x="537" y="208"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3128" y="-982"/>
+            <player id="3" state="Available" x="-81" y="-550"/>
+            <player id="4" state="Available" x="-4135" y="259"/>
+            <player id="5" state="Available" x="3975" y="1011"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 88" value="0">
+        <ball state="InGame" x="-88" y="683"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3552" y="-1066"/>
+            <player id="3" state="Available" x="-541" y="-1013"/>
+            <player id="4" state="Available" x="-2244" y="564"/>
+            <player id="5" state="Available" x="-1959" y="-2676"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="3557" y="1463"/>
+            <player id="3" state="Available" x="-3879" y="1221"/>
+            <player id="4" state="Available" x="-3281" y="-113"/>
+            <player id="5" state="Available" x="-2560" y="81"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 89" value="0">
+        <ball state="InGame" x="-1264" y="-1421"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-2513" y="-1800"/>
+            <player id="3" state="Available" x="3236" y="564"/>
+            <player id="4" state="Available" x="730" y="-1351"/>
+            <player id="5" state="Available" x="2505" y="1222"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3205" y="867"/>
+            <player id="3" state="Available" x="-3256" y="-2700"/>
+            <player id="4" state="Available" x="-2239" y="426"/>
+            <player id="5" state="Available" x="1573" y="-1434"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 90" value="0">
+        <ball state="InGame" x="-2476" y="1997"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-4059" y="1945"/>
+            <player id="3" state="Available" x="-1913" y="1686"/>
+            <player id="4" state="Available" x="913" y="-1683"/>
+            <player id="5" state="Available" x="-1391" y="716"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-1752" y="1932"/>
+            <player id="3" state="Available" x="-491" y="685"/>
+            <player id="4" state="Available" x="-2774" y="2750"/>
+            <player id="5" state="Available" x="3864" y="-569"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 91" value="0">
+        <ball state="InGame" x="-2887" y="1359"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3892" y="-929"/>
+            <player id="3" state="Available" x="-450" y="-1311"/>
+            <player id="4" state="Available" x="-3540" y="2780"/>
+            <player id="5" state="Available" x="-3132" y="2253"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-537" y="865"/>
+            <player id="3" state="Available" x="3868" y="896"/>
+            <player id="4" state="Available" x="-936" y="-1798"/>
+            <player id="5" state="Available" x="-3071" y="1707"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 92" value="0">
+        <ball state="InGame" x="1363" y="838"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3655" y="-690"/>
+            <player id="3" state="Available" x="887" y="839"/>
+            <player id="4" state="Available" x="-1172" y="1764"/>
+            <player id="5" state="Available" x="-511" y="643"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4151" y="201"/>
+            <player id="2" state="Available" x="1206" y="178"/>
+            <player id="3" state="Available" x="-437" y="-1498"/>
+            <player id="4" state="Available" x="2281" y="1981"/>
+            <player id="5" state="Available" x="567" y="1521"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 93" value="0">
+        <ball state="InGame" x="-712" y="885"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1901" y="-105"/>
+            <player id="3" state="Available" x="-2774" y="-919"/>
+            <player id="4" state="Available" x="1497" y="-1741"/>
+            <player id="5" state="Available" x="-3260" y="2260"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="2466" y="668"/>
+            <player id="3" state="Available" x="-959" y="1700"/>
+            <player id="4" state="Available" x="-3637" y="1438"/>
+            <player id="5" state="Available" x="-2509" y="514"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 94" value="0">
+        <ball state="InGame" x="-1785" y="1312"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-3063" y="-282"/>
+            <player id="3" state="Available" x="-2236" y="210"/>
+            <player id="4" state="Available" x="-657" y="83"/>
+            <player id="5" state="Available" x="2061" y="-2113"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-203" y="-1227"/>
+            <player id="3" state="Available" x="-1081" y="2595"/>
+            <player id="4" state="Available" x="-1405" y="1341"/>
+            <player id="5" state="Available" x="2336" y="670"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 95" value="0">
+        <ball state="InGame" x="3632" y="-254"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1923" y="1768"/>
+            <player id="3" state="Available" x="-2445" y="-1515"/>
+            <player id="4" state="Available" x="3255" y="882"/>
+            <player id="5" state="Available" x="-1964" y="-2700"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="1292" y="-392"/>
+            <player id="3" state="Available" x="-2385" y="1717"/>
+            <player id="4" state="Available" x="-512" y="-2785"/>
+            <player id="5" state="Available" x="3067" y="-386"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 96" value="0">
+        <ball state="InGame" x="2378" y="346"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="1004" y="-1137"/>
+            <player id="3" state="Available" x="-2567" y="616"/>
+            <player id="4" state="Available" x="1940" y="367"/>
+            <player id="5" state="Available" x="3443" y="863"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4161" y="85"/>
+            <player id="2" state="Available" x="3863" y="-625"/>
+            <player id="3" state="Available" x="4122" y="-1644"/>
+            <player id="4" state="Available" x="3837" y="737"/>
+            <player id="5" state="Available" x="2666" y="2653"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 97" value="0">
+        <ball state="InGame" x="2520" y="-173"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="596" y="-9"/>
+            <player id="3" state="Available" x="3325" y="-978"/>
+            <player id="4" state="Available" x="2084" y="140"/>
+            <player id="5" state="Available" x="-3070" y="-640"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="992" y="1217"/>
+            <player id="3" state="Available" x="3867" y="-983"/>
+            <player id="4" state="Available" x="-753" y="-1191"/>
+            <player id="5" state="Available" x="-2648" y="258"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 98" value="0">
+        <ball state="InGame" x="-1967" y="-1721"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="2467" y="-69"/>
+            <player id="3" state="Available" x="-2463" y="-2691"/>
+            <player id="4" state="Available" x="-2480" y="-1941"/>
+            <player id="5" state="Available" x="-1301" y="1279"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="923" y="-2610"/>
+            <player id="3" state="Available" x="3849" y="742"/>
+            <player id="4" state="Available" x="621" y="-2076"/>
+            <player id="5" state="Available" x="814" y="-471"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 99" value="0">
+        <ball state="InGame" x="-3715" y="422"/>
+        <team>
+            <player id="1" state="Available" x="-4130" y="-455"/>
+            <player id="2" state="Available" x="-3368" y="-1199"/>
+            <player id="3" state="Available" x="700" y="463"/>
+            <player id="4" state="Available" x="-3216" y="-1000"/>
+            <player id="5" state="Available" x="-275" y="-944"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="-3352" y="-825"/>
+            <player id="3" state="Available" x="-3176" y="938"/>
+            <player id="4" state="Available" x="-4318" y="-701"/>
+            <player id="5" state="Available" x="-3990" y="-204"/>
+        </opponents>
+    </situation>
+    <situation name="Situation 100" value="0">
+        <ball state="InGame" x="-59" y="-163"/>
+        <team>
+            <player id="1" state="Available" x="-4500" y="0"/>
+            <player id="2" state="Available" x="-1322" y="268"/>
+            <player id="3" state="Available" x="-1896" y="1156"/>
+            <player id="4" state="Available" x="2323" y="-2647"/>
+            <player id="5" state="Available" x="-3381" y="-998"/>
+        </team>
+        <opponents>
+            <player id="1" state="Available" x="4500" y="0"/>
+            <player id="2" state="Available" x="256" y="-133"/>
+            <player id="3" state="Available" x="-882" y="1654"/>
+            <player id="4" state="Available" x="3619" y="-555"/>
+            <player id="5" state="Available" x="247" y="1302"/>
+        </opponents>
+    </situation>
+</situations>

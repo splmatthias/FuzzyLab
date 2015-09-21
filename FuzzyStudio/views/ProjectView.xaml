@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="FuzzyStudio.views.ProjectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dd="clr-namespace:fuzzyStudio.designData"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type dd:ProjectVm}}" 
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Expander ExpandDirection="Right" IsExpanded="True" BorderBrush="Black" BorderThickness="0,0,1,0">
+            <Expander.Header>
+                <TextBlock Margin="2,10" Text="Projectexplorer" FontSize="16" >
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="90" />
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+            </Expander.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MinWidth="225" >
+                <TreeView FontSize="14" 
+                          Padding="0,0,10,0" 
+                          BorderThickness="0,0,0,0" 
+                          BorderBrush="{x:Null}" 
+                          SelectedItemChanged="TreeView_OnSelectedItemChanged">
+                    <TreeViewItem Header="Project" IsExpanded="True">
+                        <TreeViewItem Header="Controller Configuration" DataContext="{Binding ControllerConfiguration}"/>
+                        <TreeViewItem Header="Fuzzy Logic" IsExpanded="True">
+                            <TreeViewItem Header="Numeric Variables" DataContext="{Binding NumericVariables}"/>
+                            <TreeViewItem Header="Fuzzy Variables" DataContext="{Binding FuzzyVariables}"/>
+                            <TreeViewItem Header="Inference" IsExpanded="True">
+                                <TreeViewItem Header="Fuzzification" DataContext="{Binding Fuzzification}"/>
+                                <TreeViewItem Header="Iterations" ItemsSource="{Binding Iterations.Items}" IsExpanded="True">
+                                    <TreeViewItem.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Name}"/>
+                                        </DataTemplate>
+                                    </TreeViewItem.ItemTemplate>
+                                </TreeViewItem>
+                                <TreeViewItem Header="Defuzzification" DataContext="{Binding Defuzzification}"/>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Evaluations" ItemsSource="{Binding Evaluations}" IsExpanded="True">
+                            <TreeViewItem.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Date}"/>
+                                </DataTemplate>
+                            </TreeViewItem.ItemTemplate>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeView>
+            </ScrollViewer>
+        </Expander>
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ContentPresenter Margin="5" Content="{Binding CurrentView}" ContentTemplateSelector="{StaticResource TemplateSelector}"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

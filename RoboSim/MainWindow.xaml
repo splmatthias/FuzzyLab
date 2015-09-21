@@ -1,0 +1,124 @@
+﻿<Window xmlns:controls="clr-namespace:RoboSim.controls"  xmlns:RoboSim="clr-namespace:RoboSim"  x:Class="RoboSim.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:designData="clr-namespace:RoboSim.designData"
+        mc:Ignorable="d" 
+        d:DataContext="{d:DesignInstance Type=designData:MainVm, IsDesignTimeCreatable=True}"
+        Title="Soccer Simulator" Height="600" Width="800" Icon="resources/Icon.jpg">
+    <Window.Resources>
+        <ResourceDictionary Source="Themes/Generic.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" >
+            <MenuItem Header="File">
+                <MenuItem Header="New Project..." Command="{Binding CreateNewProject}"/>
+                <MenuItem Header="New Situation..." Command="{Binding AddSituation}" InputGestureText="Strg+N"/>
+                <MenuItem Header="Open Project..." Command="{Binding OpenProject}" InputGestureText="Strg+O"/>
+                <MenuItem Header="Save Project..." Command="{Binding SaveProject}" InputGestureText="Strg+S"/>
+                <Separator/>
+                <MenuItem Header="Schließen" InputGestureText="Alt+F4"/>
+            </MenuItem>
+        </Menu>
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top"  OverflowMode="Never" ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded">
+                <Button Command="{Binding AddSituation}" ToolTip="Create new project">
+                    <Image Source="resources/document.png"  Height="15" />
+                </Button>
+                <Button Command="{Binding OpenProject}" ToolTip="Open existing project">
+                    <Image Source="resources/folder-horizontal-open.png"  Height="15" />
+                </Button>
+                <Button Command="{Binding SaveProject}" ToolTip="Save project">
+                    <Image Source="resources/disk.png"  Height="15" />
+                </Button>
+                <Separator/>
+                <Button Command="{Binding Randomize}" ToolTip="Randomize">
+                    <Image Source="resources/asterisk-yellow.png"  Height="15" />
+                </Button>            
+            </ToolBar>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <RoboSim:EditSituation DataContext="{Binding SelectedItem}"  Grid.Row="0"/>
+                <ListView Grid.Row="1" MinHeight="160" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Padding="0" BorderThickness="0,1,0,0">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5" >
+                                <Viewbox Width="170" Height="120" >
+                                    <controls:SoccerField>
+                                        <ContentControl DataContext="{Binding OwnTeam[0]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding OwnTeam[1]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding OwnTeam[2]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding OwnTeam[3]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding OwnTeam[4]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+
+                                        <ContentControl DataContext="{Binding Opponents[0]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding Opponents[1]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding Opponents[2]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding Opponents[3]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+                                        <ContentControl DataContext="{Binding Opponents[4]}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource PlayerTemplate}"/>
+
+                                        <ContentControl DataContext="{Binding Ball}" 
+                                                        Canvas.Left="{Binding X, Converter={StaticResource XBallConverter}}" 
+                                                        Canvas.Top="{Binding Y, Converter={StaticResource YBallConverter}}"
+                                                        Content="{Binding}" 
+                                                        ContentTemplate="{StaticResource BallTemplate}"/>
+                                    </controls:SoccerField>
+                                </Viewbox>
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </DockPanel>
+    </DockPanel>
+</Window>

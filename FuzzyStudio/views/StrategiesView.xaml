@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="FuzzyStudio.views.StrategiesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:designData="clr-namespace:fuzzyStudio.designData"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=designData:ControllerConfigVm, IsDesignTimeCreatable=True}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions> 
+        <TextBlock FontSize="26" Margin="0,0,0,20" TextDecorations="Underline" HorizontalAlignment="Center" >Controller Configuration</TextBlock>
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
+            <GroupBox Margin="5">
+                <GroupBox.Header>
+                    <TextBlock FontSize="16">Rule Inference</TextBlock>
+                </GroupBox.Header>
+                <StackPanel Orientation="Vertical">
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Evaluations Strategy:" HorizontalAlignment="Right"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding EvaluationStrategies.Items}" SelectedItem="{Binding EvaluationStrategies.SelectedItem}" Width="150">
+                        </ComboBox>
+                    </Grid>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Merging Strategy:" HorizontalAlignment="Right"/>
+                            <ComboBox  Grid.Column="1" ItemsSource="{Binding MergingStrategies.Items}" SelectedItem="{Binding MergingStrategies.SelectedItem}" Width="150">
+                        </ComboBox>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Margin="5" >
+                <GroupBox.Header>
+                    <TextBlock FontSize="16">Defuzzification</TextBlock>
+                </GroupBox.Header>
+                <StackPanel>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Scaling Strategy:" HorizontalAlignment="Right"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding ScaleStrategies.Items}" SelectedItem="{Binding ScaleStrategies.SelectedItem}" Width="150"/>
+                    </Grid>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Merging Strategy:" HorizontalAlignment="Right"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding MergeStrategies.Items}" SelectedItem="{Binding MergeStrategies.SelectedItem}" Width="150"/>
+                    </Grid>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Defuzzification Strategy:" HorizontalAlignment="Right"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding DefuzzifyStrategies.Items}" SelectedItem="{Binding DefuzzifyStrategies.SelectedItem}" Width="150"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </WrapPanel>
+    </Grid>
+</UserControl>

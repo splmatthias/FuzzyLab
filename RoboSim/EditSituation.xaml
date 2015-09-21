@@ -1,0 +1,328 @@
+﻿<UserControl xmlns:controls="clr-namespace:RoboSim.controls"  xmlns:RoboSim="clr-namespace:RoboSim"  x:Class="RoboSim.EditSituation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:specialized="clr-namespace:System.Collections.Specialized;assembly=System"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:designData="clr-namespace:RoboSim.designData"
+             xmlns:viewModels="clr-namespace:RoboSim.viewModels"
+             xmlns:converter="clr-namespace:RoboSim.converter"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=designData:SituationVm, IsDesignTimeCreatable=True}"
+             d:DesignHeight="300" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Generic.xaml" />
+                <ResourceDictionary>
+                    <DataTemplate x:Key="TeamItemTemplate">
+                        <GroupBox>
+                            <GroupBox.Header>
+                                <Border Margin="0,1" 
+                            Width="20" 
+                            Height="20" 
+                            CornerRadius="10" 
+                            Padding="0"
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" >
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource TeamBackgroundStyle}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding States.SelectedItem}" Value="Available">
+                                                    <Setter Property="BorderBrush" Value="Black"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding States.SelectedItem}" Value="Disabled">
+                                                    <Setter Property="BorderThickness" Value="2"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding States.SelectedItem}" Value="Penalized">
+                                                    <Setter Property="BorderThickness" Value="2"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Label Foreground="White" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding No}" FontSize="12"/>
+                                </Border>
+                            </GroupBox.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label   Grid.Row="0" Grid.Column="0" Content="Player State"/>
+                                <ComboBox Grid.Row="0" Grid.Column="1" SelectedItem="{Binding States.SelectedItem}"  ItemsSource="{Binding States.Items}"/>
+                                <Label   Grid.Row="1" Grid.Column="0" Content="Position X"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Text="{Binding X}"/>
+                                <Label   Grid.Row="2" Grid.Column="0" Content="Position Y"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Text="{Binding Y}"/>
+                                <!--<Label   Grid.Row="3" Grid.Column="0" Content="Direction "/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Margin="2" Text="{Binding Direction}"/>-->
+                            </Grid>
+                        </GroupBox>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" MinWidth="200"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0">
+            <StackPanel Margin="5">
+                <Border CornerRadius="10" BorderBrush="#D4DEE4" BorderThickness="1">
+                    <Expander IsExpanded="True" BorderThickness="0">
+                        <Expander.Header>
+                            <Border CornerRadius="10" BorderThickness="1" BorderBrush="Black" Background="{StaticResource OwnTeamColor}" Width="170" Height="20">
+                                <Label Foreground="White" Content="Own Team" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                            </Border>
+                        </Expander.Header>
+                        <Border BorderThickness="0,1,0,0" BorderBrush="#D4DEE4"  Padding="5">
+                            <StackPanel>
+                                <ItemsControl ItemTemplate="{StaticResource TeamItemTemplate}" ItemsSource="{Binding OwnTeam}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                </Border>
+                <Border CornerRadius="10" BorderBrush="#D4DEE4" BorderThickness="1" Margin="0,5,0,0">
+                    <Expander IsExpanded="True" BorderThickness="0">
+                        <Expander.Header>
+                            <Border CornerRadius="10" BorderThickness="1" BorderBrush="Black" Background="{StaticResource OpponentTeamColor}" Width="170" Height="20">
+                                <Label Foreground="White" Content="Opponents" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                            </Border>
+                        </Expander.Header>
+                        <Border BorderThickness="0,1,0,0" BorderBrush="#D4DEE4" Padding="5" >
+                            <StackPanel>
+                                <ItemsControl ItemTemplate="{StaticResource TeamItemTemplate}" ItemsSource="{Binding Opponents}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                </Border>
+                <Border CornerRadius="10" BorderBrush="#D4DEE4" BorderThickness="1" Margin="0,5,0,0">
+                    <Expander IsExpanded="True" BorderThickness="0" DataContext="{Binding Ball}">
+                        <Expander.Header>
+                            <Border CornerRadius="10" BorderThickness="1" BorderBrush="Black" Background="Orange" Width="170" Height="20">
+                                <Label Foreground="White" Content="Ball" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                            </Border>
+                        </Expander.Header>
+                        <Border BorderThickness="0,1,0,0" BorderBrush="#D4DEE4" Padding="5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label   Grid.Row="0" Grid.Column="0" Content="Ball State"/>
+                                <ComboBox Grid.Row="0" Grid.Column="1" SelectedItem="{Binding States.SelectedItem}"  ItemsSource="{Binding States.Items}"/>
+                                <Label   Grid.Row="1" Grid.Column="0" Content="Position X"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Text="{Binding X}"/>
+                                <Label   Grid.Row="2" Grid.Column="0" Content="Position Y"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Text="{Binding Y}"/>
+                            </Grid>
+                        </Border>
+                    </Expander>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Column ="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition MinWidth="150" MaxWidth="200"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Situation Name"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Margin="2"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="Situation"/>
+            <Slider Grid.Row="0" Grid.Column="3" Margin="2" TickPlacement="BottomRight" Minimum="{Binding MinSituationValue}" Maximum="{Binding MaxSituationValue}" Value="{Binding SituationValue}"/>
+            <Border Grid.Row="1" Grid.Column="3" Margin="2" Height="10">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="Blue" Offset="1"/>
+                        <GradientStop Color="Lime" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Grid Grid.Row="2" Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Critical Defense"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Open Game"/>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="Critical Attack"/>
+            </Grid>
+            <Viewbox Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="0" Margin="0,10,0,0" >
+                <controls:SoccerField>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding OwnTeam[0]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding OwnTeam[1]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding OwnTeam[2]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding OwnTeam[3]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding OwnTeam[4]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+
+
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding Opponents[0]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding Opponents[1]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding Opponents[2]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding Opponents[3]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XPlayerConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YPlayerConverter}}"
+                           DataContext="{Binding Opponents[4]}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource PlayerTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+
+
+                    <Thumb Canvas.Left="{Binding X, Converter={StaticResource XBallConverter}}" 
+                           Canvas.Top="{Binding Y, Converter={StaticResource YBallConverter}}"
+                           DataContext="{Binding Ball}"
+                           DragDelta="Thumb_DragDelta"
+                           Cursor="SizeAll" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <ContentControl 
+                                    Content="{Binding}" 
+                                    ContentTemplate="{StaticResource BallTemplate}"/>
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                </controls:SoccerField>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

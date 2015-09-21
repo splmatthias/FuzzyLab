@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{073F9561-5AE8-4323-95F9-62F7C7049608}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fuzzyStudio</RootNamespace>
+    <AssemblyName>FuzzyStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.2.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="controls\FuzzyEdit.cs" />
+    <Compile Include="controls\Region.cs" />
+    <Compile Include="converter\NumberRangeConverter.cs" />
+    <Compile Include="DelegateCommand.cs" />
+    <Compile Include="designData\DefuzzificationVm.cs" />
+    <Compile Include="designData\EvaluationVm.cs" />
+    <Compile Include="designData\FuzzificationVm.cs" />
+    <Compile Include="designData\FuzzyConfigVm.cs" />
+    <Compile Include="designData\FuzzyVariableListVm.cs" />
+    <Compile Include="designData\IterationVm.cs" />
+    <Compile Include="designData\ProjectVm.cs" />
+    <Compile Include="selectors\TemplateSelector.cs" />
+    <Compile Include="validation\MsfValidation.cs" />
+    <Compile Include="viewModels\DefuzzificationResultViewModel.cs" />
+    <Compile Include="viewModels\DefuzzificationViewModel.cs" />
+    <Compile Include="viewModels\DefuzzifiedValueViewModel.cs" />
+    <Compile Include="viewModels\EvaluationViewModel.cs" />
+    <Compile Include="viewModels\FuzzificationViewModel.cs" />
+    <Compile Include="viewModels\FuzzyConfigViewModel.cs" />
+    <Compile Include="viewModels\FuzzyRuleViewModel.cs" />
+    <Compile Include="viewModels\FuzzyValueViewModel.cs" />
+    <Compile Include="viewModels\FuzzyVariableListViewModel.cs" />
+    <Compile Include="viewModels\FuzzyVariableViewModel.cs" />
+    <Compile Include="viewModels\IterationListViewModel.cs" />
+    <Compile Include="viewModels\IterationViewModel.cs" />
+    <Compile Include="viewModels\NumericValueViewModel.cs" />
+    <Compile Include="viewModels\NumericVariableListViewModel.cs" />
+    <Compile Include="viewModels\NumericVariableViewModel.cs" />
+    <Compile Include="viewModels\RuleViewModel.cs" />
+    <Compile Include="viewModels\ScopeViewModel.cs" />
+    <Compile Include="viewModels\TermValueViewModel.cs" />
+    <Compile Include="viewModels\TermViewModel.cs" />
+    <Compile Include="views\ConfigurationView.xaml.cs">
+      <DependentUpon>ConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DefuzzificationView.xaml.cs">
+      <DependentUpon>DefuzzificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\EditFuzzySet.xaml.cs">
+      <DependentUpon>EditFuzzySet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\EvaluationView.xaml.cs">
+      <DependentUpon>EvaluationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzificationView.xaml.cs">
+      <DependentUpon>FuzzificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzyConfigurationView.xaml.cs">
+      <DependentUpon>FuzzyConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzyIterationView.xaml.cs">
+      <DependentUpon>FuzzyIterationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzyRulesView.xaml.cs">
+      <DependentUpon>FuzzyRulesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzyTermListView.xaml.cs">
+      <DependentUpon>FuzzyTermListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FuzzyVariableView.xaml.cs">
+      <DependentUpon>FuzzyVariableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\IMainView.cs" />
+    <Compile Include="views\IView.cs" />
+    <Compile Include="views\ProjectView.xaml.cs">
+      <DependentUpon>ProjectView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\ConfigurationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\DefuzzificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\EvaluationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzyIterationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzyRulesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzyTermListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzyVariableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\NumericVariablesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\StrategiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="designData\ControllerConfigVm.cs" />
+    <Compile Include="designData\MainVm.cs" />
+    <Compile Include="services\ConfigurationService.cs" />
+    <Compile Include="services\IConfigurationService.cs" />
+    <Compile Include="viewModels\ControllerConfigViewModel.cs" />
+    <Compile Include="viewModels\ListViewModel.cs" />
+    <Compile Include="viewModels\MainViewModel.cs" />
+    <Compile Include="viewModels\ProjectViewModel.cs" />
+    <Compile Include="viewModels\ViewModel.cs" />
+    <Compile Include="views\NumericVariablesView.xaml.cs">
+      <DependentUpon>NumericVariablesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\StrategiesView.xaml.cs">
+      <DependentUpon>StrategiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="views\EditFuzzySet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FuzzyConfigurationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\ProjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FuzzyController\FuzzyController.csproj">
+      <Project>{78286fad-1ef2-4914-98cb-7b7a519e61ba}</Project>
+      <Name>FuzzyController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoboSim\RoboSim.csproj">
+      <Project>{d4cdd1a3-dc2c-41bc-92cb-f94bdf075231}</Project>
+      <Name>RoboSim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfBase\WpfBase.csproj">
+      <Project>{a47df3f0-c6d9-494e-8391-b2b1a0315b97}</Project>
+      <Name>WpfBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\folder-horizontal-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\document.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="fuzzyStudio.views.DefuzzificationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:fuzzyStudio.viewModels"
+             xmlns:dd="clr-namespace:fuzzyStudio.designData"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type dd:DefuzzificationVm}}" >
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModels:FuzzyVariableViewModel}">
+            <TextBlock Text="{Binding Identifier}" FontSize="14"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Text="Last Scope" Margin="5,2" FontSize="16"/>
+        <ListBox x:Name="listBoxLastScope" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding LastScope}" IsSynchronizedWithCurrentItem="True"/>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center">
+            <Button Content="&gt;&gt;&gt;" Margin="5,0"     Command="{Binding AddToDefuzzification}"      CommandParameter="{Binding ElementName=listBoxLastScope,Path=SelectedItem}"/>
+            <Button Content="&lt;&lt;&lt;" Margin="5,5,5,0" Command="{Binding RemoveFromDefuzzification}" CommandParameter="{Binding ElementName=listBoxDefuzzify,Path=SelectedItem}"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Margin="5,2" Text="Variables to Defuzzify" FontSize="16"/>
+        <ListBox x:Name="listBoxDefuzzify" Grid.Column="2" Grid.Row="1" ItemsSource="{Binding VariablesToDefuzzify}" IsSynchronizedWithCurrentItem="True"/>
+    </Grid>
+</UserControl>

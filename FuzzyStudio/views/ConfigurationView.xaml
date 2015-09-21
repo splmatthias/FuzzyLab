@@ -1,0 +1,32 @@
+﻿<UserControl xmlns:views="clr-namespace:FuzzyStudio.views" x:Class="FuzzyStudio.views.ConfigurationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:fuzzyStudio.controls"
+             mc:Ignorable="d" d:DesignWidth="800" >
+    <UserControl.Resources>
+        <Style x:Key="regionStyle" TargetType="controls:Region">
+            <Style.Setters>
+                <Setter Property="BorderBrush" Value="#FFAEAEAE"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            </Style.Setters>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <controls:Region Style="{StaticResource regionStyle}" Header="Inference Strategies" IsExpanded="True" Grid.Row="0" Grid.Column="0">
+            <views:StrategiesView DataContext="{Binding ControllerConfiguration}" />
+        </controls:Region>
+    </Grid>
+</UserControl>

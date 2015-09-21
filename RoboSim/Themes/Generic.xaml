@@ -1,0 +1,87 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RoboSim"
+    xmlns:converter="clr-namespace:RoboSim.converter"
+    xmlns:viewModels="clr-namespace:RoboSim.viewModels">
+
+    <SolidColorBrush x:Key="OwnTeamColor">#3271BB</SolidColorBrush>
+    <SolidColorBrush x:Key="OpponentTeamColor">Tomato</SolidColorBrush>
+
+    <converter:XPositionConverter Width="350" x:Key="XPlayerConverter"/>
+    <converter:YPositionConverter Height="350" x:Key="YPlayerConverter"/>
+    <converter:XPositionConverter Width="200" x:Key="XBallConverter"/>
+    <converter:YPositionConverter Height="200" x:Key="YBallConverter"/>
+
+    <Style x:Key="TeamBackgroundStyle" TargetType="Border">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Team}"  Value="Own">
+                <Setter Property="Background" Value="{StaticResource OwnTeamColor}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Team}"  Value="Opponents">
+                <Setter Property="Background" Value="{StaticResource OpponentTeamColor}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding States.SelectedItem}" Value="Disabled">
+                <Setter Property="BorderBrush" Value="Cyan"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding States.SelectedItem}" Value="Penalized">
+                <Setter Property="BorderBrush" Value="Magenta"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <DataTemplate x:Key="PlayerTemplate" DataType="viewModels:PlayerViewModel">
+        <Border Margin="2" 
+                    Width="350" 
+                    Height="350" 
+                    CornerRadius="250" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    RenderTransformOrigin="0.5,0.5">
+            <Border.Style>
+                <Style TargetType="Border" BasedOn="{StaticResource TeamBackgroundStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding States.SelectedItem}" Value="Available">
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="BorderThickness" Value="10"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding States.SelectedItem}" Value="NotPlaying">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding States.SelectedItem}" Value="Disabled">
+                            <Setter Property="BorderThickness" Value="50"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding States.SelectedItem}" Value="Penalized">
+                            <Setter Property="BorderThickness" Value="50"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+
+                </Style>
+            </Border.Style>
+            <Label Foreground="White" Padding="0,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding No}" FontSize="180"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BallTemplate" DataType="viewModels:BallViewModel">
+        <Border BorderBrush="White" 
+                    Margin="2" 
+                    BorderThickness="10" 
+                    Width="200" 
+                    Height="200" 
+                    CornerRadius="100" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    RenderTransformOrigin="0.5,0.5"
+                    Background="Orange">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding States.SelectedItem}" Value="NotInGame">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

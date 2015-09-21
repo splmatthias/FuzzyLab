@@ -1,0 +1,44 @@
+﻿<Window x:Class="fuzzyStudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:views="clr-namespace:FuzzyStudio.views"
+        xmlns:dd="clr-namespace:fuzzyStudio.designData"
+        mc:Ignorable="d" 
+        d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type dd:MainVm}}" 
+        Title="{Binding Title}" Height="700" Width="1100">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New Project..." Command="{Binding CreateNewProject}" InputGestureText="Strg+N"/>
+                <MenuItem Header="Open Project..." Command="{Binding OpenProject}"  InputGestureText="Strg+O"/>
+                <MenuItem Header="Save Project" Command="{Binding SaveProject}" InputGestureText="Strg+S"/>
+                <MenuItem Header="Save Project As..." Command="{Binding SaveProjectAs}" InputGestureText="Umschalt+Strg+S"/>
+                <Separator/>
+                <MenuItem Header="Close" Command="{Binding Close}" InputGestureText="Alt+F4"/>
+            </MenuItem>
+        </Menu>
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top"  OverflowMode="Never" ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded" >
+                <Button Command="{Binding CreateNewProject}" ToolTip="Create new project">
+                    <Image Source="resources/document.png"  Height="15" />
+                </Button>
+                <Button Command="{Binding OpenProject}" ToolTip="Open existing project">
+                    <Image Source="resources/folder-horizontal-open.png"  Height="15" />
+                </Button>
+                <Button Command="{Binding SaveProject}" ToolTip="Save project">
+                    <Image Source="resources/disk.png"  Height="15" />
+                </Button>
+                <Separator/>
+                <Button Content="Add Iteration" Command="{Binding Project.Iterations.AddIteration}"/>
+                <Button Content="Remove Last Iteration" Command="{Binding Project.Iterations.RemoveIteration}"/>
+                <Separator/>
+                <Button Command="{Binding Project.StartSingleEvaluation}" Content="Single Evaluations" />
+                <Separator/>
+                <Button Command="{Binding OpenPlugin}" Content="Open Soccer Simulator" />
+            </ToolBar>
+            <views:ProjectView DataContext="{Binding Project}" BorderThickness="0,1,0,0" BorderBrush="#FF616161"/>
+        </DockPanel>
+    </DockPanel>
+</Window>
